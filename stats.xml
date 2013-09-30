@@ -1,0 +1,34 @@
+<brawl.DeckStats>
+  <character>
+    <int-array>
+      <int>0</int>
+      <int>1</int>
+      <int>2</int>
+    </int-array>
+    <int-array>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+    <int-array>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+    <int-array>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+    </int-array>
+    <int-array>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+    <int-array>
+      <int>1</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+  </character>
+</brawl.DeckStats>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Django/!svn/ver/524/trunk/BRAWL/src/brawl/resources/deckimages
+END
+freeze.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Django/!svn/ver/449/trunk/BRAWL/src/brawl/resources/deckimages/freeze.jpg
+END
+arrowleft.png
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Django/!svn/ver/524/trunk/BRAWL/src/brawl/resources/deckimages/arrowleft.png
+END
+highlight.png
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Django/!svn/ver/449/trunk/BRAWL/src/brawl/resources/deckimages/highlight.png
+END
+arrowright.png
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Django/!svn/ver/524/trunk/BRAWL/src/brawl/resources/deckimages/arrowright.png
+END

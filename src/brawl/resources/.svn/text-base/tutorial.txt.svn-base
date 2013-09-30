@@ -1,0 +1,80 @@
+Introduction - BRAWL is a real time card game about quick reflexes and quick
+thinking, played with different card decks. Each of the six decks, each
+representing a different character, contains a unique combination of strengths,
+flaws, and tricks. Because BRAWL is played in real time, it's got all the
+action and flavor of a real fight!
+
+Game Modes - There are two game modes in BRAWL. In the first, Training Mode,
+players take turns playing games. This game mode is great for learning how all
+ the cards work, or bringing a new player up to speed.
+
+Tournament Mode, the second mode, is more like a real brawl, because it happens
+in real time. Both players play the game at their own pace, not taking turns.
+This can get pretty fast!
+
+Object of the Game - To win a game of BRAWL, a player has to win more Bases than
+your opponent does, through strategic play of all the cards. When the game is
+over, you will count the number of hit cards on both ends of each Base. Whoever
+has more hits on their side of the Base wins that Base, and whoever wins more
+bases wins the game. if a Base has an equal number of hits from both players,
+then the Base is won by whoever played it. If both players win an equal number
+of bases, it's a draw.
+
+How to Play - After selecting "New Game" from the Main Menu, you'll choose
+the number of human players in the game - one or two. After this, you'll then
+select which game mode to play - Training or Tournament. If you select
+Tournament Mode, you'll get a chance to select how fast the computer plays their
+cards. You'll then select the character you want to play as, and, if you're
+playing the computer, the character it will play as. If you had selected two
+player mode earlier, both humans select their characters simultaneously.
+
+The Cards - There are many types of cards you can play in BRAWL. Following is
+a description of all cards you'll see.
+
+HIT (RH, BH, GH) - The most common card you'll see, the HIT card is the main way
+to accumulate hits on a Base. They come in three colors: red, blue, and green.
+You can play a HIT on either end of a base, or on another HIT of HIT-2 of the
+same color. You can also play a HIT on a PRESS, as long as the color of the HIT
+you're playing matches the color of the HIT(s) underneath it.
+
+HIT2 (RH2, BH2, GH2) - The HIT-2 card is similar to the HIT card, but with a few
+differences. It can only be played on a HIT or HIT-2 of the same color, but
+not on a base or a press! As its name implies, this card counts as two hits.
+
+BLOCK (RB, BB, GB) - BLOCKs come in the same colors as  HIT cards, however,
+they can only be played on a HIT or HIT-2 of the same color. This card prevents
+more hits from being played on a string of HITs, as you can't play a HIT on a
+BLOCK.
+
+PRESS (P) - The PRESS card is an anti-block card. It can only be played over a
+BLOCK to allow the player to continue to string hits together. The HITs played
+on a PRESS from that point on must match the color of the HITS previously.
+A BLOCK can't be played directly on a PRESS.
+
+CLEAR (C) - The CLEAR card removes a BASE, and all cards played on it, from the
+game permanently. However, if there is only one base in play, it can't
+be cleared from play. Also, if there are three bases in play, the middle base
+cannot be cleared.
+
+BASE (B) - A BASE card is automatically played at the start of the game, one
+for each player. Once drawn, a BASE can be played to either side of existing
+bases to allow new hits to be played. However, there can never be more than
+three bases on the gameboard at once.
+
+FREEZE (F) - A FREEZE card can be played on a base to "freeze" it, preventing
+it from being affected by any other cards, including CLEARs. Each character has
+three freezes, which will always be the last three cards in their deck.
+Once every BASE in play is frozen, the game is over.
+
+Tips and Strategies
+* Practice. Learn each deck's strengths and weaknesses. Some decks play slowly,
+others play very quickly. Many of a deck's tricks will only become apparent
+after several games.
+* If you are in a winning position, you can speed up the game by playing
+quickly! Instead of playing cards on a BASE in play, discard them as quickly as
+possible instead, so as to get to your FREEZE cards and end the game then.
+* One thing to keep in mind is it is legal to play cards on both sides of a
+BASE in play. This may seem strange, but it can be a good move. For example, if
+you know a character is weak in a certain color of HITs, it might be wise to
+immediately play that color on a BASE without hits, so they can't string
+together HITs.

@@ -1,0 +1,56 @@
+
+MAIN MENU
+1 - New Game
+2 - Tutorial
+3 - View Decks
+4 - Quit
+
+VIEW DECKS
+BENNETT
+HITS - 4 RH, 3 GH, 8 BH
+BLOCKS - 1 RB, 1 GB, 1 BB
+PRESSES - 1
+BASES - 7
+CLEARS - 6
+
+CHRIS
+HITS - 8 RH, 5 GH, 7 BH
+BLOCKS - 2 RB, 2 GB, 2 BB
+BASES - 4
+CLEARS - 2
+
+DARWIN
+HITS - 8 RH, 4 GH, 4 BH
+HIT-2s - 1 RH2, 1 BH2
+BLOCKS - 3 RB, 1 GB, 3 BB
+PRESSES - 3
+BASES - 3
+CLEARS - 1
+
+MORGAN
+HITS - 2 RH, 6 GH, 8 BH
+BLOCKS - 1 RB, 2 GB, 4 BB
+BASES - 5
+CLEARS - 4
+
+HALE
+HITS - 4 RH, 8 GH, 5 BH
+HIT-2s - 1 RH2, 1 GH2, 1 BH2
+BLOCKS - 1 RB, 1 GB
+BASES - 6
+CLEARS - 4
+
+PEARL
+HITS - 1 RH, 7 GH, 7 BH
+HIT-2s - 1 GH2, 1 BH2
+BLOCKS - 1 RB, 1 GB, 1 BB
+PRESSES - 2
+BASES - 5
+CLEARS - 5
+
+Press <enter> to continue
+MAIN MENU
+1 - New Game
+2 - Tutorial
+3 - View Decks
+4 - Quit

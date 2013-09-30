@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Django/!svn/ver/567/trunk/BRAWL/src/brawl
+END
+CardStack.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Django/!svn/ver/567/trunk/BRAWL/src/brawl/CardStack.java
+END
+ConsoleUI.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Django/!svn/ver/552/trunk/BRAWL/src/brawl/ConsoleUI.java
+END
+KeyBindings.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Django/!svn/ver/533/trunk/BRAWL/src/brawl/KeyBindings.java
+END
+Card.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Django/!svn/ver/478/trunk/BRAWL/src/brawl/Card.java
+END
+stats.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Django/!svn/ver/449/trunk/BRAWL/src/brawl/stats.xml
+END
+GameController.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Django/!svn/ver/552/trunk/BRAWL/src/brawl/GameController.java
+END
+SwingGUI.form
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Django/!svn/ver/538/trunk/BRAWL/src/brawl/SwingGUI.form
+END
+Color.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Django/!svn/ver/449/trunk/BRAWL/src/brawl/Color.java
+END
+Screen.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Django/!svn/ver/533/trunk/BRAWL/src/brawl/Screen.java
+END
+Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Django/!svn/ver/449/trunk/BRAWL/src/brawl/Type.java
+END
+I_View.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Django/!svn/ver/508/trunk/BRAWL/src/brawl/I_View.java
+END
+Main.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Django/!svn/ver/552/trunk/BRAWL/src/brawl/Main.java
+END
+Mode.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Django/!svn/ver/449/trunk/BRAWL/src/brawl/Mode.java
+END
+DeckStats.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Django/!svn/ver/479/trunk/BRAWL/src/brawl/DeckStats.java
+END
+BaseInPlay.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Django/!svn/ver/528/trunk/BRAWL/src/brawl/BaseInPlay.java
+END
+GameModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Django/!svn/ver/554/trunk/BRAWL/src/brawl/GameModel.java
+END
+Player.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Django/!svn/ver/540/trunk/BRAWL/src/brawl/Player.java
+END
+Character.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Django/!svn/ver/449/trunk/BRAWL/src/brawl/Character.java
+END
+SwingGUI.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Django/!svn/ver/559/trunk/BRAWL/src/brawl/SwingGUI.java
+END
+skeletons.out
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Django/!svn/ver/552/trunk/BRAWL/src/brawl/skeletons.out
+END
+Computer.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Django/!svn/ver/567/trunk/BRAWL/src/brawl/Computer.java
+END

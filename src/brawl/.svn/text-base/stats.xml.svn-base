@@ -1,0 +1,34 @@
+<BRAWL.DeckStats>
+  <character>
+    <int-array>
+      <int>7</int>
+      <int>7</int>
+      <int>0</int>
+    </int-array>
+    <int-array>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+    <int-array>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+    <int-array>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+    <int-array>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+    <int-array>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </int-array>
+  </character>
+</BRAWL.DeckStats>

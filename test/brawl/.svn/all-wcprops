@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Django/!svn/ver/568/trunk/BRAWL/test/brawl
+END
+CardStackTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Django/!svn/ver/545/trunk/BRAWL/test/brawl/CardStackTest.java
+END
+ConsoleUITest.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Django/!svn/ver/561/trunk/BRAWL/test/brawl/ConsoleUITest.java
+END
+GameModelIntTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/Django/!svn/ver/556/trunk/BRAWL/test/brawl/GameModelIntTest.java
+END
+KeyBindingsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Django/!svn/ver/558/trunk/BRAWL/test/brawl/KeyBindingsTest.java
+END
+CardTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Django/!svn/ver/544/trunk/BRAWL/test/brawl/CardTest.java
+END
+ComputerIntTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/Django/!svn/ver/501/trunk/BRAWL/test/brawl/ComputerIntTest.java
+END
+GameControllerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Django/!svn/ver/511/trunk/BRAWL/test/brawl/GameControllerTest.java
+END
+MainTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Django/!svn/ver/520/trunk/BRAWL/test/brawl/MainTest.java
+END
+DeckStatsTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Django/!svn/ver/505/trunk/BRAWL/test/brawl/DeckStatsTest.java
+END
+BaseInPlayTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Django/!svn/ver/544/trunk/BRAWL/test/brawl/BaseInPlayTest.java
+END
+GameControllerIntTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/Django/!svn/ver/567/trunk/BRAWL/test/brawl/GameControllerIntTest.java
+END
+GameModelTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Django/!svn/ver/501/trunk/BRAWL/test/brawl/GameModelTest.java
+END
+PlayerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Django/!svn/ver/501/trunk/BRAWL/test/brawl/PlayerTest.java
+END
+SwingGUITest.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Django/!svn/ver/560/trunk/BRAWL/test/brawl/SwingGUITest.java
+END
+IntegrationTestSuite.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Django/!svn/ver/568/trunk/BRAWL/test/brawl/IntegrationTestSuite.java
+END
+ComputerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Django/!svn/ver/560/trunk/BRAWL/test/brawl/ComputerTest.java
+END

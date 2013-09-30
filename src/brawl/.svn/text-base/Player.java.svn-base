@@ -1,0 +1,318 @@
+package brawl;
+
+import java.util.Stack;
+
+/**
+ * A <code>Player</code> represents a participant in the BRAWL game.
+ * A <code>Player</code> can be either a human <code>player</code> or
+ * <code>Computer</code>. A game will contain two <code>Player</code>s only.
+ * One <code>Player</code> will be human, and the other <code>Player</code> will
+ * be either human or a <code>Computer</code> opponent.
+ *
+ * @author  Brian Yabuki
+ * @version 2.0       - March 13, 2013
+ */
+public class Player
+{
+    /**
+     * deck is a <code>Cardstack</code> that represents the <code>Player<code>'s
+     * chosen BRAWL deck.
+     */
+    private CardStack deck;
+    /**
+     * The discard is a <code>CardStack</code> that represents a
+     * <code>Player</code>'s discard pile.
+     */
+    private CardStack discard;
+
+    private Character character;
+
+    //set values for indices into card arrays
+    private final int kHIT = 0, kHIT2 = 3, kBLOCK = 6, kPRESS = 9, kBASE = 10,
+    kCLEAR = 11, kFREEZE = 12, kRED = 0, kGREEN = 1, kBLUE = 2;
+
+    /**
+     * Constructor for a <code>Player</code>.
+     */
+    public Player()
+    {
+        //Create a new instance of a player
+        //SET discard CardStack to an empty ArrayList
+        //not correct; Stacks now
+        this.deck = new CardStack();
+        deck.createDecks();
+
+        this.discard = new CardStack();
+
+    }
+
+    /**
+     * The setDeck method is used to set a <code>Player</code>'s deck to that of
+     * the player's corresponding character.
+     *
+     * @param owner is the deck that the Player has selected to play with.
+     * @param flag whether or not the deck will be shuffled or not
+     */
+    public void setDeck(Character owner, boolean flag)
+    {
+        deck.setCharacter(owner, flag);
+        this.character = owner;
+        //System.out.println(deck.printDeck());
+    }
+
+    /**
+     * Getter for the Player's character
+     * @return the character that the player is set to
+     */
+    public Character getCharacter()
+    {
+        return this.character;
+    }
+
+    /**
+     * Pop the top <code>Card</code> off the discard pile and return it.
+     * @return  the top <code>Card</code>.
+     */
+    public Card getTopDiscard()
+    {
+
+        //POP the card from discard and return it
+        //logic to determine what the top three cards are on the discard pile
+        if(!discard.empty())
+        {
+            return discard.pop();
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+    /**
+     * Transfers a <code>Card</code> from the <code>Player</code>'s
+     * deck to their discard pile.
+     */
+    public void draw()
+    {
+        //POP a card from deck and PUSH it onto discard
+        if(!deck.empty())
+        {
+            discard.push(deck.pop());
+        }
+
+    }
+
+    /**
+     * Check to see if the deck CardStack is empty.
+     * @return <code>true</code> if it is empty,
+     * <code>false</code> otherwise.
+     */
+    public boolean isDeckEmpty()
+    {
+        return deck.empty();
+    }
+
+    /**
+     * Check to see if the discard CardStack is empty.
+     * @return <code>true</code> if it is empty,
+     * <code>false</code> otherwise.
+     */
+    public boolean isDiscardEmpty()
+    {
+        return discard.empty();
+    }
+
+    /**
+     * Getter method for the discard CardStack.
+     * @return the discard CardStack.
+     */
+    public CardStack getDiscard()
+    {
+        return discard;
+    }
+
+    /**
+     * Getter method for the deck CardStack.
+     * @return the deck CardStack.
+     */
+    public CardStack getDeck()
+    {
+        return deck;
+    }
+
+    /**
+     * Look at and return the top card off the discard pile without actually
+     * popping it off the CardStack.
+     * @param index which of the top three cards to peek at.
+     * @return the card at the desired location.
+     */
+    public Card peek(int index)
+    {
+        
+        //Peek at second to top <code>Card</code> off the discard pile
+        //and return it.
+        if (index == 1)
+        {
+            
+            return discard.peek2();
+        }
+        //Peek at third to top <code>Card</code> off the discard pile and
+        //return it.
+        else if (index == 2)
+        {
+            
+            return discard.peek3();
+        }
+        //Peek at top <code>Card</code> off the discard pile and return it.
+        return discard.peek();
+    }
+
+    /**
+     * Equals method.
+     * @param obj the object to compare to.
+     * @return <code>true</code> if the two Player's decks contain same cards,
+     * <code>false</code> otherwise.
+     */
+    @Override
+    public boolean equals(Object obj) 
+    {
+        //null reference
+        if (obj == null)
+        {
+            return false;
+        }
+        //self explanatory
+        if (!(obj instanceof Player))
+        {
+            return false;
+        }
+        final Player other = (Player) obj;
+
+        final int kNUMBRAWLCARDTYPES = 13, kNUMPLAYERS = 2;
+
+        int[][] cardArray = new int[kNUMBRAWLCARDTYPES][kNUMPLAYERS];
+
+        //loop through both player's cardstacks
+        for(int iter = 0; iter < kNUMPLAYERS; iter++)
+        {
+            CardStack cardstack;
+
+            //if the first player, use Player's deck that the equals method
+            // was called on
+            if(iter == 0)
+            {
+                cardstack = this.deck;
+            }
+            //otherwise use the deck from the Player passed in
+            else
+            {
+                cardstack = other.getDeck();
+            }
+
+            //while the deck isn't empty, pop cards from it and increment counts
+            while(!cardstack.empty())
+            {
+                Card card = cardstack.pop();
+                //first check the type of card it is
+
+                cardArray[getCardIndex(card)][iter]++;
+            }
+        }
+
+        //check to see whether card counts are equal
+        for(int iter = 0; iter < kNUMBRAWLCARDTYPES; iter++)
+        {
+            //if the counts are different between the two players
+            if(cardArray[iter][0] != cardArray[iter][1])
+            {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+    /**
+     *
+     * @param card
+     * @return
+     */
+    private int getCardIndex(Card card)
+    {
+        //if card is a HIT, get the color index as well
+        if(card.getType().equals(Type.HIT))
+        {
+            return kHIT + getColorIndex(card.getColor());
+        }
+        //if card is a HIT2, get the color index as well
+        else if(card.getType().equals(Type.HIT2))
+        {
+            return kHIT2 + getColorIndex(card.getColor());
+        }
+        //if card is a BLOCK, get the color index as well
+        else if(card.getType().equals(Type.BLOCK))
+        {
+            return kBLOCK + getColorIndex(card.getColor());
+        }
+        //if card is a PRESS, return PRESS index
+        else if(card.getType().equals(Type.PRESS))
+        {
+            return kPRESS;
+        }
+        //if card is a CLEAR, return CLEAR index
+        else if(card.getType().equals(Type.CLEAR))
+        {
+            return kCLEAR;
+        }
+        //if card is a BASE, return BASE index
+        else if (card.getType().equals(Type.BASE))
+        {
+            return kBASE;
+        }
+        //else, card is a FREEZE
+        else
+        {
+            return kFREEZE;
+        }
+    }
+
+    /**
+     * Return the correct color subindex
+     * @param color the color to use
+     * @return the subindex
+     */
+    private int getColorIndex(Color color)
+    {
+        //check the color and return the appropriate subindex
+        //if color is RED, return RED sub index
+        if(color.equals(Color.RED))
+        {
+            return kRED;
+        }
+        //if color is GREEN, return GREEN sub index
+        else if(color.equals(Color.GREEN))
+        {
+            return kGREEN;
+        }
+        //else, color is BLUE (Colorless cards won't reach this point)
+        else 
+        {
+            return kBLUE;
+        }
+    }
+
+    /**
+     * Empty the Player's discard CardStack.
+     */
+    public void clearDiscard()
+    {
+        //while the discard pile still has cards
+        while(discard.size()>0)
+        {
+            discard.pop();
+        }
+    }
+
+
+}

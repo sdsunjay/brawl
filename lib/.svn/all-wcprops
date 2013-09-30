@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/Django/!svn/ver/355/trunk/BRAWL/lib
+END
+xstream-1.4.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Django/!svn/ver/332/trunk/BRAWL/lib/xstream-1.4.4.jar
+END
+checkstyle-all-4.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Django/!svn/ver/355/trunk/BRAWL/lib/checkstyle-all-4.4.jar
+END
+308checks.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Django/!svn/ver/355/trunk/BRAWL/lib/308checks.jar
+END
+AbsoluteLayout.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Django/!svn/ver/261/trunk/BRAWL/lib/AbsoluteLayout.jar
+END
+json-simple-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Django/!svn/ver/175/trunk/BRAWL/lib/json-simple-1.1.1.jar
+END
+LOC.jar
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Django/!svn/ver/355/trunk/BRAWL/lib/LOC.jar
+END
+mockito-all-1.9.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Django/!svn/ver/327/trunk/BRAWL/lib/mockito-all-1.9.5.jar
+END

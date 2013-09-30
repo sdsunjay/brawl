@@ -1,0 +1,528 @@
+
+MAIN MENU
+1 - New Game
+2 - Tutorial
+3 - View Decks
+4 - Quit
+
+SELECT PLAYERS
+1 - Solo
+2 - Versus
+3 - Main Menu
+
+SELECT MODE
+1 - Training
+2 - Tournament
+3 - Back
+
+SELECT CHARACTERS
+Choose p1 & p2 characters (E.g. bennett chris)
+BENNETT
+CHRIS
+DARWIN
+MORGAN
+HALE
+PEARL
+Choose your characters
+'play' | 'main' | 'reselect'
+
+GAMEBOARD
+ P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+
+move?
+
+GAMEBOARD
+ P1
+
+ P2
+
+P1 Top Discard
+[B H]
+P2 Top Discard
+
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[B H]
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[B BL]
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[B H]
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[P]
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[C]
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[B H]
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[B H2]
+move?
+
+GAMEBOARD
+[B H] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[B H2]
+move?
+
+GAMEBOARD
+[B H2] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[B H]
+move?
+
+GAMEBOARD
+[B H2] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B H2] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B H2] P1
+
+ P2
+
+P1 Top Discard
+[B BL]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B H2] P1
+
+ P2
+
+P1 Top Discard
+[B BL]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B BL] P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B BL] P1
+
+ P2
+
+P1 Top Discard
+[B H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B BL] P1
+
+ P2
+
+P1 Top Discard
+[P]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[B H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[C]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[B H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[B H2]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[R H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[B]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[C]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[C]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[P]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[P]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[C]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[C]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[B]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[B]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[B]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[R BL]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G BL]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G H2]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[G H]
+P2 Top Discard
+[R H]
+move?
+
+GAMEBOARD
+[B P] P1
+
+ P2
+
+P1 Top Discard
+[B H]
+P2 Top Discard
+[R H]
+move?
+
+MAIN MENU
+1 - New Game
+2 - Tutorial
+3 - View Decks
+4 - Quit

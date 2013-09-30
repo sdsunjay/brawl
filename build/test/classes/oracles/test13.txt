@@ -1,0 +1,72 @@
+
+MAIN MENU
+1 - New Game
+2 - Tutorial
+3 - View Decks
+4 - Quit
+
+SELECT PLAYERS
+1 - Solo
+2 - Versus
+3 - Main Menu
+
+SELECT MODE
+1 - Training
+2 - Tournament
+3 - Back
+
+SELECT DIFFICULTY
+1 - Easy
+2 - Medium
+3 - Hard
+4 - Main Menu
+
+SELECT CHARACTERS
+Choose p1 & p2 characters (E.g. bennett chris)
+BENNETT
+CHRIS
+DARWIN
+MORGAN
+HALE
+PEARL
+Choose your characters
+'play' | 'main' | 'reselect'
+
+GAMEBOARD
+ P1
+
+ P2
+
+P1 Top Discard
+
+P2 Top Discard
+
+move?
+
+GAMEBOARD
+ P1
+
+ P2
+
+P1 Top Discard
+[B H]
+P2 Top Discard
+
+move?
+
+GAMEBOARD
+ P1
+
+ P2
+
+P1 Top Discard
+[B BL]
+P2 Top Discard
+
+move?
+
+MAIN MENU
+1 - New Game
+2 - Tutorial
+3 - View Decks
+4 - Quit
