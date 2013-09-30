@@ -6,36 +6,67 @@
     android:focusable="false"
     android:orientation="horizontal" >
 
-<GridView
-    android:id="@+id/gridview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_above="@+id/next1"
-    android:layout_below="@+id/textView1"
-    android:gravity="center"
-    android:horizontalSpacing="2dip"
-    android:numColumns="2"
-    android:padding="2dip"
-    android:stretchMode="columnWidth"
-    android:verticalSpacing="2dip" />
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/fileManager"
+        android:layout_below="@+id/textView1"
+        android:gravity="center"
+        android:horizontalSpacing="2dip"
+        android:numColumns="2"
+        android:padding="2dip"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dip" >
 
- <Button
-     android:id="@+id/next1"
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content"
-     android:layout_alignParentBottom="true"
-     android:gravity="center"
-     android:text="Next" />
+    </GridView>
 
- <TextView
-     android:id="@+id/textView1"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_alignParentLeft="true"
-     android:layout_alignParentRight="true"
-     android:layout_alignParentTop="true"
-     android:text="Temp"
-     android:textSize="50sp"
-     android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:gravity="center"
+        android:text="Temp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:id="@+id/fileManager"
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="10"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/next1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#007FFF"
+            android:clickable="true"
+            android:gravity="center|center"
+            android:text="Next"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/back1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#838B83"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </RelativeLayout>

@@ -15,10 +15,12 @@
  *******************************************************************************/
 package com.nostra13.example.universalimageloader;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -28,6 +30,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -35,9 +38,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.nostra13.example.universalimageloader.Constants.Extra;
-import com.nostra13.example.universalimageloader.ImageListActivity.ItemAdapter.ViewHolder;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 
@@ -46,163 +47,111 @@ import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
  */
 public class ImageGridActivity extends AbsListViewBaseActivity {
 
-	//url of images
-	String[] imageUrls;
+	// the number of the screeen
+	public static Integer number;
 
-	//does stuff
-	Intent intent;
-	//the number of the screeen
-	String number;
-	//the text at the top
-	TextView tx;
-	ImageAdapter[] adapter = new ImageAdapter[100];
+	// each category
+	public static ArrayList<Item> items;
 
-	boolean[] checkStatus= new boolean[1000];
-    CheckBox[] check = new CheckBox[100];
-	DisplayImageOptions options;
+	// does stuff
+	public Intent intent;
+
+	// the text at the top
+	public static TextView tx;
+
+	// adapter
+	public static ImageAdapter adapter; 
+	public DisplayImageOptions options;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ac_image_grid);
-		setup();
-		setIntentStuff();
-		options = new DisplayImageOptions.Builder()
-			.showStubImage(R.drawable.ic_stub)
-			.showImageForEmptyUri(R.drawable.ic_empty)
-			.showImageOnFail(R.drawable.ic_error)
-			.cacheInMemory(true)
-			.cacheOnDisc(true)
-			.bitmapConfig(Bitmap.Config.RGB_565)
-			.build();
+	
 
+		// initialize stuff
+		setup();
+
+		// for the image library stuff
+		options = new DisplayImageOptions.Builder()
+				.showStubImage(R.drawable.ic_stub)
+				.showImageForEmptyUri(R.drawable.ic_empty)
+				.showImageOnFail(R.drawable.ic_error).cacheInMemory(true)
+				.cacheOnDisc(true).bitmapConfig(Bitmap.Config.RGB_565).build();
 
 		createNextButton();
-		
+	}
 
+	private void setup() {
+		
+		adapter = new ImageAdapter();
+		// Bundle bundle = getIntent().getExtras();
+		number = Integer.valueOf(0);
+		items = HomeActivity.map.get(number);
+		tx = (TextView) findViewById(R.id.textView1);
+		Log.d("tag", "Number is: " + number);
+		tx.setTextColor(Color.RED);
+		tx.setText("Dress It Up!");
+
+		listView = (GridView) findViewById(R.id.gridview);
+
+		((GridView) listView).setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				//view.setHovered(true);
-				Log.d("tag","clicked grid picture");
-				
-				
-			
-				int color;
-			
-				color=-16776961;
-				
-				//image1.bringToFront();
-				
-				//view.setBackgroundColor(color);
-				//shows image in its own screen
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// view.setHovered(true);
+				Log.d("tag", "clicked grid picture");
 				startImagePagerActivity(position);
+				// selected_position = position;
+
 			}
 		});
-		
-		
-	
-		
-	}
+		listView.setClickable(true);
 
-	private void setup()
-	{
-
-		for(int i=0;i<100;i++)
-		{
-			adapter[i] = new ImageAdapter(false);
-		}
-		Bundle bundle = getIntent().getExtras();
-		imageUrls = bundle.getStringArray(Extra.IMAGES);
-		number = bundle.getString("number");
-		 tx= (TextView) findViewById(R.id.textView1);
-		 tx.setTextColor(Color.RED);
-		listView = (GridView) findViewById(R.id.gridview);
-		((GridView) listView).setAdapter(new ImageAdapter(false));
-
+		// m_vwJokeLayout.setLongClickable(true);
 		listView.bringToFront();
+
 	}
-	
-	private void setIntentStuff()
-	{
-	
-		intent = new Intent(this, ImageGridActivity.class);
-		if(number.equals("0"))
-		{
-			tx.setText("Dress It Up!");
-			intent.putExtra(Extra.IMAGES, Constants.tops);
-			intent.putExtra("number", "1");
-		}
-		else if(number.equals("1"))
-		{
-			tx.setText("Top It Off!");
-			intent.putExtra(Extra.IMAGES, Constants.bottoms);
-			intent.putExtra("number", "2");
-		}
-		else if(number.equals("2"))
-		{
-			tx.setText("Bottom Line");
-			
-			intent.putExtra(Extra.IMAGES, Constants.shorts);
-			intent.putExtra("number", "3");
-		}
-		else if(number.equals("3"))
-		{
-			tx.setText("Short N' Sweet");
-			intent.putExtra(Extra.IMAGES, Constants.jackets);
-			intent.putExtra("number", "4");
-		}
-		else if(number.equals("4"))
-		{
-			tx.setText("Warmin' Up");
-		
-			intent.putExtra(Extra.IMAGES, Constants.shoes);
-			intent.putExtra("number", "5");
-		}
-		else if(number.equals("5"))
-		{
-			tx.setText("Finish the Look");
-		}
-	}
-	private void createNextButton()
-	{
-	
-		if (number.equals("5"))
-		{
-					intent = new Intent(this, ImageListActivity.class);
-		}
-	
+
+	private void createNextButton() {
+
+		intent = new Intent(this, ImageListActivity.class);
 		Button next = (Button) findViewById(R.id.next1);
 		next.bringToFront();
 		next.setOnClickListener(new View.OnClickListener() {
-		
-			
+
 			public void onClick(View v) {
-			
-				startActivity(intent);
-            	
-                // Perform action on click
-            }
-        });
+				number = number + 1;
+				if (number == 6) {
+					startActivity(intent);
+				}
+				else
+				{
+					Log.d("tag", "Number is: " + number);
+					items = HomeActivity.map.get(number);
+					tx.setText(Constants.HEADERS[number]);
+					adapter.notifyDataSetChanged();
+				}
+				// Perform action on click
+			}
+		});
 	}
+
+	public static Context getAppContext() {
+        return ImageGridActivity.getAppContext();
+    }
 	private void startImagePagerActivity(int position) {
 		intent = new Intent(this, ImagePagerActivity.class);
-		intent.putExtra(Extra.IMAGES, imageUrls);
+		// intent.putExtra(Extra.IMAGES, imageUrls);
 		intent.putExtra(Extra.IMAGE_POSITION, position);
 		startActivity(intent);
 	}
-	
-
-	
 
 	public class ImageAdapter extends BaseAdapter {
-		//private ImageLoadingListener animateFirstListener = new AnimateFirstDisplayListener();
-		private boolean state;
-		public ImageAdapter(boolean state)
-		{
-			this.state=state;
+		public ImageAdapter() {
 		}
-		
+
 		public class ViewHolder {
 			public CheckBox checkbox;
 			public ImageView image;
@@ -210,7 +159,9 @@ public class ImageGridActivity extends AbsListViewBaseActivity {
 
 		@Override
 		public int getCount() {
-			return imageUrls.length;
+			return 12;
+			// to be changed
+			// return imageUrls.length;
 		}
 
 		@Override
@@ -224,74 +175,51 @@ public class ImageGridActivity extends AbsListViewBaseActivity {
 		}
 
 		@Override
-		public View getView(final int position, View convertView, ViewGroup parent) {
+		public View getView(final int position, View convertView,
+				ViewGroup parent) {
 			View view = convertView;
 			ViewHolder holder = new ViewHolder();
-			//holder = new ViewHolder();
-			//final ImageView imageView;
-			//the line below makes shit work
-			//convertView=null;
+			// holder = new ViewHolder();
+			// final ImageView imageView;
+			// the line below makes shit work..sometimes
+			convertView = null;
 			if (convertView == null) {
-				//imageView = (ImageView) getLayoutInflater().inflate(R.layout.item_grid_image, parent, false);
-				view = getLayoutInflater().inflate(R.layout.item_grid_image, parent, false);
-		
-				//holder.checkbox = (TextView) view.findViewById(R.id.checkBox1);
-				holder.image = (ImageView) view.findViewById(R.id.image);				
+				// imageView = (ImageView)
+				// getLayoutInflater().inflate(R.layout.item_grid_image, parent,
+				// false);
+				view = getLayoutInflater().inflate(R.layout.item_grid_image,
+						parent, false);
+
+				// holder.checkbox = (TextView)
+				// view.findViewById(R.id.checkBox1);
+				holder.image = (ImageView) view.findViewById(R.id.image);
 				holder.checkbox = (CheckBox) view.findViewById(R.id.checkBox1);
-				if(state)
-				{
-					holder.checkbox.setChecked(true);
-				}
-				else
-				{
-					holder.checkbox.setChecked(false);
-				}
-				view.setTag(holder);	
-				//imageLoader.displayImage(imageUrls[position], holder.image, options);
+				view.setTag(holder);
+				// imageLoader.displayImage(imageUrls[position], holder.image,
+				// options);
 
-			} 
-			else {
-			
-				//unimplemented logic to correctly set the checkboxes!!!
-				//if(state)
-				//{
-					//holder.checkbox.setChecked(true);
-				//}
-				//else
-				//{
-	
-				//}
-				holder = (ViewHolder) view.getTag();
-				
-				//when do we set it to false? True?
-				holder.checkbox.setChecked(false);
 			}
-			imageLoader.displayImage(imageUrls[position], holder.image, options);
-			//holder.checkbox.setSelected(getState());
-		  return view;
-		}
-		 public boolean getState() {
-		        return state;
-		    } 
-		 public void setState(boolean state) {
-	        this.state = state;
-	    } 
-	}
-
-	private static class AnimateFirstDisplayListener extends SimpleImageLoadingListener {
-
-		static final List<String> displayedImages = Collections.synchronizedList(new LinkedList<String>());
-
-		@Override
-		public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-			if (loadedImage != null) {
-				ImageView imageView = (ImageView) view;
-				boolean firstDisplay = !displayedImages.contains(imageUri);
-				if (firstDisplay) {
-					FadeInBitmapDisplayer.animate(imageView, 500);
-					displayedImages.add(imageUri);
-				}
-			}
+			//else {
+			  
+			  //unimplemented logic to correctly set the checkboxes!!!
+			  //if(state) //{ //holder.checkbox.setChecked(true); //} //else
+			  //{
+			  
+			  //} holder = (ViewHolder) view.getTag();
+			  
+			  //when do we set it to false? True?
+			  //holder.checkbox.setChecked(false); }
+			 
+			/*
+			 * if(check[position]!=null && check[position].isChecked()) {
+			 * holder.checkbox.setChecked(true); } else {
+			 * holder.checkbox.setChecked(false); }
+			 */
+			// check[position]=holder.checkbox;
+			imageLoader.displayImage(items.get(position).getUrl(),
+					holder.image, options);
+			// holder.checkbox.setSelected(getState());
+			return view;
 		}
 	}
 }

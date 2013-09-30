@@ -20,12 +20,15 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
 
-import com.nostra13.example.universalimageloader.Constants.Extra;
 import com.nostra13.universalimageloader.utils.L;
 
 /**
@@ -34,6 +37,10 @@ import com.nostra13.universalimageloader.utils.L;
 public class HomeActivity extends BaseActivity {
 
 	private static final String TEST_FILE_NAME = "Universal Image Loader @#&=+-_.,!()~'%20.png";
+	//public static Map<String, ArrayList<Item>> map = new HashMap<String, ArrayList<String>>();
+	public static Map<Integer, ArrayList<Item>> map = new HashMap<Integer, ArrayList<Item>>();
+	public static final Map<Integer, String[]> URLS = new HashMap<Integer, String[]>();
+	public static final Map<Integer, String[]> IDS = new HashMap<Integer, String[]>();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -44,22 +51,75 @@ public class HomeActivity extends BaseActivity {
 		if (!testImageOnSdCard.exists()) {
 			copyTestImageToSdCard(testImageOnSdCard);
 		}
+		
+		createItems();
+		
 		Intent intent; 
 		//Intent intent = new Intent(this, ImagePagerActivity.class);
 		intent= new Intent(this, ImageGridActivity.class);
-		//Intent intent = new Intent(this, ImageListActivity.class);
-		intent.putExtra(Extra.IMAGES, Constants.dresses);
-		intent.putExtra("number","0");
 		startActivity(intent);
 	}
-
 
 	@Override
 	public void onBackPressed() {
 		imageLoader.stop();
-		super.onBackPressed();
+		if(ImageGridActivity.number!=0)
+		{
+			ImageGridActivity.number--;
+			Log.d("tag", "Number is: " + ImageGridActivity.number);
+			ImageGridActivity.items = HomeActivity.map.get(ImageGridActivity.number);
+			ImageGridActivity.tx.setText(Constants.HEADERS[ImageGridActivity.number]);
+			ImageGridActivity.adapter.notifyDataSetChanged();
+		}
+		else
+		{
+			super.onBackPressed();
+		}
+			
 	}
 
+	private void createItems()
+	{
+
+		String[] tempUrls;
+		String[] tempIds;
+		
+		helpCreateItems();
+		
+		//loop through all categories
+		for(int i=0;i<6;i++)
+		{
+			ArrayList<Item> temp = new ArrayList<Item>();
+			tempUrls=URLS.get(Integer.valueOf(i));
+			tempIds=IDS.get(Integer.valueOf(i));
+			//loop through each of the 13 items in each category
+			for(int ii=0;ii<13;ii++)
+			{
+				//Item(String url, String id, int category)
+				temp.add(new Item(tempUrls[ii],tempIds[ii],i));
+				
+			}
+			map.put(Integer.valueOf(i), new ArrayList<Item>(temp));
+		}
+	}
+	private void helpCreateItems()
+	{
+		//urls
+		URLS.put(Integer.valueOf(0),Constants.dresses);
+		URLS.put(Integer.valueOf(1),Constants.tops);
+		URLS.put(Integer.valueOf(2),Constants.bottoms);
+		URLS.put(Integer.valueOf(3),Constants.shorts);
+		URLS.put(Integer.valueOf(4),Constants.outerwear);
+		URLS.put(Integer.valueOf(5),Constants.shoes);
+		//product ids
+		IDS.put(Integer.valueOf(0),Constants.dressesIDs);
+		IDS.put(Integer.valueOf(1),Constants.topsIDs);
+		IDS.put(Integer.valueOf(2),Constants.bottomsIDs);
+		IDS.put(Integer.valueOf(3),Constants.shortsIDs);
+		IDS.put(Integer.valueOf(4),Constants.outerwearIDs);
+		IDS.put(Integer.valueOf(5),Constants.shoesIDs);
+		
+	}
 	private void copyTestImageToSdCard(final File testImageOnSdCard) {
 		new Thread(new Runnable() {
 			@Override

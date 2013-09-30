@@ -15,6 +15,8 @@
  *******************************************************************************/
 package com.nostra13.example.universalimageloader;
 
+import java.util.ArrayList;
+
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -50,7 +52,7 @@ public class ImagePagerActivity extends BaseActivity {
 		setContentView(R.layout.ac_image_pager);
 
 		Bundle bundle = getIntent().getExtras();
-		String[] imageUrls = bundle.getStringArray(Extra.IMAGES);
+		//String[] imageUrls = bundle.getStringArray(Extra.IMAGES);
 		int pagerPosition = bundle.getInt(Extra.IMAGE_POSITION, 0);
 
 		if (savedInstanceState != null) {
@@ -68,7 +70,7 @@ public class ImagePagerActivity extends BaseActivity {
 			.build();
 
 		pager = (ViewPager) findViewById(R.id.pager);
-		pager.setAdapter(new ImagePagerAdapter(imageUrls));
+		pager.setAdapter(new ImagePagerAdapter(HomeActivity.map.get(0)));
 		pager.setCurrentItem(pagerPosition);
 	}
 
@@ -79,11 +81,11 @@ public class ImagePagerActivity extends BaseActivity {
 
 	private class ImagePagerAdapter extends PagerAdapter {
 
-		private String[] images;
+		private ArrayList<Item> items;
 		private LayoutInflater inflater;
 
-		ImagePagerAdapter(String[] images) {
-			this.images = images;
+		ImagePagerAdapter(ArrayList<Item> items) {
+			this.items = items;
 			inflater = getLayoutInflater();
 		}
 
@@ -98,7 +100,7 @@ public class ImagePagerActivity extends BaseActivity {
 
 		@Override
 		public int getCount() {
-			return images.length;
+			return items.size();
 		}
 
 		@Override
@@ -107,7 +109,7 @@ public class ImagePagerActivity extends BaseActivity {
 			ImageView imageView = (ImageView) imageLayout.findViewById(R.id.image);
 			final ProgressBar spinner = (ProgressBar) imageLayout.findViewById(R.id.loading);
 
-			imageLoader.displayImage(images[position], imageView, options, new SimpleImageLoadingListener() {
+			imageLoader.displayImage(items.get(position).getUrl(), imageView, options, new SimpleImageLoadingListener() {
 				@Override
 				public void onLoadingStarted(String imageUri, View view) {
 					spinner.setVisibility(View.VISIBLE);
